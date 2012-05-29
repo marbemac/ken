@@ -135,7 +135,7 @@ module Ken
     protected
     # returns parsed json response from freebase mqlread service
     def get_query_response(query, cursor=nil)
-      envelope = { :qname => {:query => query, :escape => false }}
+      envelope = { :qname => {:extended => true, :query => query, :escape => false }}
       envelope[:qname][:cursor] = cursor if cursor
       
       response = http_request mqlread_service_url, :queries => envelope.to_json
