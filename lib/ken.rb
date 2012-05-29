@@ -43,6 +43,7 @@ module Ken
     # :id => id, # needs to be merge!d in instance method
     :guid => nil,
     :name => nil,
+    :mid => nil,
     :"ken:type" => [{
       :id => nil,
       :name => nil,
